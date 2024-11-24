@@ -1,4 +1,3 @@
-# --------------------------- Homework_4  ------------------------------------
 """
 Виконав: Григорій Чернолуцький
 Модуль
@@ -17,12 +16,16 @@
 Ваш код має створити нову колекцію з таким результатом:
 ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]
 """
+import doctest
+
 
 #    Функція обробки послідовності по алгоритму FizzBuzz
 def fizz_buzz(source: list) -> list:
     """
     :param source: вхідний набір чисел
     :return: результативний набір із заміненими значеннями відповідно до завдання
+    >>> fizz_buzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+    ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz']
     """
     result = list()
     for item in source:
@@ -38,3 +41,20 @@ def fizz_buzz(source: list) -> list:
         else:
             result.append(str(item))
     return result
+
+
+def fizz_buzz_generator(n: int) -> list:
+    """
+    :param n: кількість чисел
+    :return: набір чисел
+    >>> fizz_buzz_generator(15)
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    """
+    result = list()
+    for i in range(1, n + 1):
+        result.append(i)
+    return result
+
+
+if __name__ == '__main__':
+    doctest.testmod(verbose=True)
