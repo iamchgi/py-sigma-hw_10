@@ -7,16 +7,17 @@ Package Version
 pip 24.3.1
 
 """
-from logger_create import create_logger
-from mymath import fibonacci_iterator_show
+from create_logger import logger
+from my_math import cubic_main, quadratic_main, fb, fbg, fibo
 
-logger = create_logger()
+STREAM_COUNT = 15
+
 
 def main() -> None:
-    fb()
-    fibo()
-    cubic_main()
+    logger.info(fb(fbg(STREAM_COUNT)))
+    logger.info(fibo(STREAM_COUNT))
     quadratic_main()
+    cubic_main()
     pass
 
 
@@ -24,5 +25,4 @@ def main() -> None:
 if __name__ == '__main__':
     logger.debug("We are going to start")
     main()
-    logger.critical("We are done")
-
+    logger.debug("We have done all correctly")
