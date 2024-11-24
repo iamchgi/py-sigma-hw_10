@@ -1,0 +1,22 @@
+The ```Simple Doc``` module
+========================
+
+Using ``square_eq_solver``
+------------------------
+>>> from quadratic_equation import square_eq_solver
+>>> square_eq_solver(1,2,3)
+3
+>>> square_eq_solver(0,0,0)
+0
+>>> square_eq_solver(3,5,3)
+8
+
+Using ``square_eq_solver``
+-------------------------
+>>> from simple_doc import division
+>>> division(1, 1)
+1
+>>> division(1, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: integer division or modulo by zero
